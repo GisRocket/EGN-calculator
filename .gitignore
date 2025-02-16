@@ -1,0 +1,25 @@
+# Ignore Visual Studio Code files
+.vscode/
+*.code-workspace
+
+# Ignore GitHub Desktop configuration files
+*.gitattributes
+*.gitignore
+
+# Ignore general Git files
+.git/
+
+# Ignore log files
+*.log
+
+# Ignore temporary files
+*.tmp
+*.temp
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore node modules (if you use Node.js)
+node_modules/
+npm-debug.log
