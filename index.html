@@ -7,6 +7,47 @@
     <title>ЕГН калкулатор</title>
     <!-- FontAwesome CDN link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM7m1p2OrJAB4ghv6VICKjshWz5ngjpMNTPAsqS" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: url("background.jpeg");
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            margin: 0;
+        }
+        .text-box {
+            background-color: white; /* Бял фон */
+            border: 1px solid #ccc; /* Светло сива граница */
+            border-radius: 15px; /* Заоблени краища */
+            padding: 20px; /* Отстояние вътре в полето */
+            width: 300px; /* Ширина на полето */
+            margin: 20px auto; /* Центриране на полето */
+            text-align: center; /* Центриране на съдържанието */
+        }
+        .download-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            margin-top: 10px; /* Отстояние от горната част на бутона */
+            text-align: center;
+            text-decoration: none;
+            align-items: center;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+            display: block;
+            margin: 20px auto; /* Центриране и отстояние отгоре */
+        }
+    </style>
+    
 </head>
 <body>
     <div class="text-box">
@@ -18,35 +59,8 @@
             <p id="date1"></p>
             <p id="message"></p> <!-- Нов параграф за съобщенията -->
         </form>
+        <a href="Михаил Лазаров - ЕГН калкулатор.ppsx" download="Михаил Лазаров - ЕГН калкулатор.ppsx" class="download-btn">Изтегли презентация</a>
     </div>
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-
-
-            background: url("background.jpeg");
-
-            background-attachment: fixed;
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-            width: 100%;
-            margin: 0;
-
-        }
-        .text-box {
-            background-color: white; /* Бял фон */
-            border: 1px solid #ccc; /* Светло сива граница */
-            border-radius: 15px; /* Заоблени краища */
-            padding: 20px; /* Отстояние вътре в полето */
-            width: 300px; /* Ширина на полето */
-            margin: 20px auto; /* Центриране на полето */
-        }
-    </style>
     <script src="message.js"></script>
     <script src="script.js"></script>
 </body>
