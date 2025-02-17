@@ -59,6 +59,17 @@
             <p id="date1"></p>
             <p id="message"></p> <!-- Нов параграф за съобщенията -->
         </form>
+        <form id="birthForm">
+            <label for="birthDate">Дата на раждане:</label>
+            <input type="date" id="birthDate" name="birthDate">
+            <label for="gender">Пол:</label>
+            <select id="gender" name="gender">
+                <option value="мъж">Мъж</option>
+                <option value="жена">Жена</option>
+            </select>
+            <button type="submit">Изчисли ЕГН</button>
+            <p id="generatedEgn"></p> <!-- Параграф за генерираното ЕГН -->
+        </form>
         <a href="Михаил Лазаров - ЕГН калкулатор.ppsx" download="Михаил Лазаров - ЕГН калкулатор.ppsx" class="download-btn">Изтегли презентация</a>
     </div>
     <script src="message.js"></script>

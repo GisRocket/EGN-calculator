@@ -46,9 +46,39 @@ document.getElementById('egnForm').addEventListener('submit', function(event) {
     document.getElementById("date1").innerText = date1;
 });
 
-// Изчистване на променливите при напускане на страницата
-window.addEventListener('beforeunload', function() {
-    document.getElementById('egn').value = '';
-    document.getElementById('date1').innerText = '';
-    document.getElementById('message').innerText = '';
+document.getElementById('birthForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const birthDate = new Date(document.getElementById('birthDate').value);
+    const gender = document.getElementById('gender').value;
+
+    const year = birthDate.getFullYear();
+    const month = birthDate.getMonth() + 1; // Месеците са от 0 до 11
+    const day = birthDate.getDate();
+
+    let egnMonth;
+    if (year < 1900) {
+        egnMonth = month + 20;
+    } else if (year >= 2000) {
+        egnMonth = month + 40;
+    } else {
+        egnMonth = month;
+    }
+
+    const yearString = year.toString().slice(-2);
+    const monthString = egnMonth.toString().padStart(2, '0');
+    const dayString = day.toString().padStart(2, '0');
+
+    let ninthDigit;
+    if (gender === 'мъж') {
+        ninthDigit = Math.floor(Math.random() * 5) * 2;
+    } else {
+        ninthDigit = Math.floor(Math.random() * 5) * 2 + 1;
+    }
+
+    const randomDigits = Math.floor(Math.random() * 100).toString().padStart(2, '0');
+
+    const egn = yearString + monthString + dayString + randomDigits + ninthDigit;
+
+    document.getElementById('generatedEgn').innerText = `Генерирано ЕГН: ${egn}`;
 });
